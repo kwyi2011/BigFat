@@ -1,17 +1,6 @@
-import math
 
-def move(x,y,step,angle=0):
-    nx = x + step * math.cos(angle)
-    ny = y + step * math.sin(angle)
-    return nx,ny
+def fact(x):
+    if x == 1:
+        return 1
+    return x * fact(x-1)
 
-def Calc(*num):
-    sum = 0
-    for n in num:
-        sum = sum + n * n
-    return sum
-def person(name,age,**kw):
-    print('name',name,'age',age,'other',kw)
-    return
-S = Calc(1,2,3,4,5,6)
-print(S)
