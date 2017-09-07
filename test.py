@@ -1,10 +1,8 @@
+def is_palindrome(n):
+    s = str(n)
+    s2 = s[-1::-1]
+    if s == s2:
+        return n
 
-def move(n, a, b, c):
-   if n == 1:
-       print(a, ' --> ', c)
-       return
-   move(n-1, a, c, b)
-   move(1, a, b, c)
-   move(n-1, b, a, c)
-   return
-
+output = filter(is_palindrome, range(1,1000))
+print(list(output))
