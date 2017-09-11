@@ -1,17 +1,18 @@
-'a test module'
+class Student(object):
+    def __init__(self, name, score):
+        self.__name = name
+        self.__score = score
 
-__author__ = 'K'
+    def print_score(self):
+        print('%s: %s' %(self.__name, self.__score))
 
-import sys
+    def set_name(self, name):
+        self.__name = name
+    def set_score(self, score):
+        self.__score = score
 
-def test():
-    args = sys.argv
-    if len(args) == 1:
-        print('Hello, world')
-    elif len(args) == 2:
-        print('Hello, %s!' % args[1])
-    else:
-        print('Too many arguements!')
+    def get_name(self):
+        return self.__name
+    def get_score(self):
+        return self.__score
 
-if __name__ == '__main__':
-    test()
