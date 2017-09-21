@@ -1,18 +1,23 @@
-class Student(object):
-    def __init__(self, name, score):
-        self.__name = name
-        self.__score = score
+class Screen(object):
+    @property
+    def width(self):
+        return self._width
+    @width.setter
+    def width(self, value):
+        self._width = value
 
-    def print_score(self):
-        print('%s: %s' %(self.__name, self.__score))
+    @property
+    def height(self):
+        return self._height
+    @height.setter
+    def height(self, value):
+        self._height = value
 
-    def set_name(self, name):
-        self.__name = name
-    def set_score(self, score):
-        self.__score = score
+    @property
+    def resolution(self):
+        print('Resolution: %s x %s' %(self._height, self._width))
 
-    def get_name(self):
-        return self.__name
-    def get_score(self):
-        return self.__score
-
+s = Screen()
+s.width = 1024
+s.height = 768
+s.resolution()
